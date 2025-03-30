@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #0b0f19;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            background: linear-gradient(90deg, #ff007f, #7b68ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #ff007f, #7b68ee);
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        /* Portfolio
+
+        /* .portfolio {
+            text-align: left;
+            padding: 50px;
+        }
+        .portfolio h1 {
+            font-size: 3rem;
+            background: linear-gradient(90deg, #ff007f, #007bff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: left;
+        }
+        .portfolio-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .portfolio-item {
+            background: #111;
+            border-radius: 15px;
+            overflow: hidden;
+            width: 30%;
+            padding-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        .portfolio-item:hover {
+            transform: scale(1.05);
+        }
+        .portfolio-item img {
+            width: 100%;
+            display: block;
+        }
+        .portfolio-item p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            text-align: center;
+        } */
+
+        .portfolio, .branding {
+            text-align: left;
+            padding: 50px;
+        }
+        .portfolio h1, .branding h1 {
+            font-size: 3rem;
+            background: linear-gradient(90deg, #ff007f, #007bff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: left;
+            font-family: sans-serif;
+            font-weight: lighter;
+        }
+        .portfolio-grid, .branding-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .portfolio-item, .branding-item {
+        background: #111;
+        border-radius: 15px;
+        overflow: hidden;
+        width: 30%;
+        height: 250px;
+        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+        position: relative;
+        }
+        .portfolio-item:hover, .branding-item:hover {
+            transform: scale(1.05);
+        }
+        .portfolio-item img, .branding-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .portfolio-item p, .branding-item p {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            font-size: 1.2rem;
+            padding: 10px;
+            text-align: center;
+            margin: 0;
+        }
+
+        .branding-item {
+            background: none !important;
+            box-shadow: none;
+        }
+
+        .branding-item img {
+            object-fit: scale-down;
+        }
+
+
+        
+        .contact {
+            padding: 50px;
+            text-align: left;
+        }
+        .contact h2 {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #ff007f, #7b68ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: left;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            gap: 15px;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background: #1a1a2e;
+            color: white;
+        }
+        .contact-form button {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background: linear-gradient(90deg, #ff007f, #7b68ee);
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Portfolio</div>
+        <nav class="nav-links">
+            <a href="#portfolio">Portfolio</a>
+            <a href="#branding">Branding</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hi, My name is John, I am a Web Developer and UX designer.</br>
+        I also create brand designs and logos.</br>
+        Please check out my work.</p>
+        <a href="#portfolio" class="button">View Portfolio</a>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <h1>PORTFOLIO</h1>
+        <div class="portfolio-grid">
+            <a target = "_blank" href="https://romantic-wescoff-ecd119.netlify.app/" class="portfolio-item">
+                <img src="images/filmfestival.png" alt="Tender Bhaskara">
+                <p>Film Festival</p>
+            </a>
+            <a target = "_blank" href="https://theofficeenglish.com/" class="portfolio-item">
+                <img src="images/theoffice.png" alt="The Office English">
+                <p>The Office English</p>
+            </a>
+            <a target = "_blank" href="https://github.com/johnroiste/Wordpress/blob/main/Manual.pdf" class="portfolio-item">
+                <img src="images/wordpress.png" alt="Wordpress Manual">
+                <p>Wordpress</p>
+            </a>
+        </div>
+        <div class="portfolio-grid">
+            <a target = "_blank" href="https://johnroiste.github.io/Restaurant/Restaurant/Restaurant%20review.html" class="portfolio-item">
+                <img src="images/restaurant.png" alt="Restaurant Review">
+                <p>Restaurant Review Website</p>
+            </a>
+            <a target = "_blank" href="https://johnroiste.github.io/grid-game/grid-game/" class="portfolio-item">
+                <img src="images/game.png" alt="Grid Game">
+                <p>Grid Game</p>
+            </a>
+            <a target = "_blank"  href="https://tender-bhaskara-b65352.netlify.app/" class="portfolio-item">
+                <img src="images/quoteGenerator.png" alt="Romantic Wescoff">
+                <p>Quote Generator</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="branding" id="branding">
+        <h1>BRANDING</h1>
+        <div class="branding-grid">
+            <div class="branding-item"><img src="images/art.png" alt="Logo 1"></div>
+            <div onclick="window.open('https://www.instagram.com/rowearireland/', '_blank')" class="branding-item"><img src="images/logo.png" alt="Logo 2"></div>
+            <div onclick="window.open('https://www.instagram.com/rowearireland/', '_blank')" class="branding-item"><img src="images/rogan.png" alt="Logo 3"></div>
+            <!-- <div class="branding-item"><img src="images/logo4.png" alt="Logo 4"></div>
+            <div class="branding-item"><img src="images/logo5.png" alt="Logo 5"></div> -->
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>DO YOU HAVE A PROJECT TO DISCUSS?</h2>
+        <form class="contact-form" action="https://formspree.io/f/mwplnrza" method="POST">
+            <input type="text" placeholder="Enter your name">
+            <input type="email" placeholder="Enter your email" name="email">
+            <textarea name ="message" rows="5" placeholder="Enter your message"></textarea>
+            <label>
+                <input type="checkbox"> I agree to the terms and conditions
+            </label>
+            <button type="submit">SEND</button>
+        </form>
+    </section>
+    
+</body>
+</html>
