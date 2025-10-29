@@ -1,270 +1,597 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Design Gorey | Website Developer Wexford | John – Portfolio</title>
-    <meta name="description" content="Professional web designer in Gorey and Wexford. John builds responsive websites, offers UX design and branding. Let's build your online presence.">
-    <meta name="keywords" content="website Gorey, web design Gorey, website developer Wexford, web designer Wexford, UX design Gorey, branding Gorey, responsive websites, freelance web developer Gorey">
-    <meta name="author" content="John Roiste">
-    <meta name="google-site-verification" content="4TlsaNjeEBoO7fmvDw8I-jW9zhsRTzQ-PRAkOZ_jU9g" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href='https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&display=swap' rel="stylesheet">
+  <title>Portfolio</title>
 
-    <!-- Local SEO Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Person",
-      "name": "John",
-      "jobTitle": "Web Designer",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Gorey",
-        "addressRegion": "County Wexford",
-        "addressCountry": "Ireland"
-      },
-      "url": "https://johnroiste.github.io/Portfolio-2025/Portfolio/",
-      "sameAs": [
-        "https://www.instagram.com/irelandpourart",
-        "https://www.instagram.com/rogan_ireland"
-      ]
+  <style>
+    html {
+      scroll-behavior: smooth;
     }
-    </script>
 
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
+    body {
+      background-color: #0b0f19;
+      color: white;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
 
-        body {
-            background-color: #0b0f19;
-            color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            background: rgba(255, 255, 255, 0.05);
-        }
-        .header .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            background: linear-gradient(90deg, #ff007f, #7b68ee);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .hero p {
-            font-size: 1.5rem;
-            font-family: 'Courier New', Courier, monospace;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            border-radius: 10px;
-            background: linear-gradient(90deg, #ff007f, #7b68ee);
-            color: white;
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
+    /* HEADER */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+    /* .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+    } */
 
-        .portfolio, .branding {
-            text-align: left;
-            padding: 50px;
-        }
-        .portfolio h1, .branding h1 {
-            font-size: 3rem;
-            background: linear-gradient(90deg, #ff007f, #007bff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-align: left;
-            font-family: sans-serif;
-            font-weight: lighter;
-        }
-        .portfolio-grid, .branding-grid {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
-        .portfolio-item, .branding-item {
-            background: #111;
-            border-radius: 15px;
-            overflow: hidden;
-            width: 30%;
-            height: 250px;
-            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out;
-            position: relative;
-        }
-        .portfolio-item:hover, .branding-item:hover {
-            transform: scale(1.05);
-        }
-        .portfolio-item img, .branding-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        .portfolio-item p, .branding-item p {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            color: white;
-            font-size: 1.2rem;
-            padding: 10px;
-            text-align: center;
-            margin: 0;
-        }
-        .branding-item {
-            background: none !important;
-            box-shadow: none;
-        }
-        .branding-item img {
-            object-fit: scale-down;
-        }
-        .contact {
-            padding: 50px;
-            text-align: left;
-        }
-        .contact h2 {
-            font-size: 2.5rem;
-            background: linear-gradient(90deg, #ff007f, #7b68ee);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-align: left;
-        }
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            max-width: 500px;
-            gap: 15px;
-        }
-        .contact-form input, .contact-form textarea {
-            padding: 10px;
-            border-radius: 5px;
-            border: none;
-            background: #1a1a2e;
-            color: white;
-        }
-        .contact-form button {
-            padding: 10px;
-            border-radius: 5px;
-            border: none;
-            background: linear-gradient(90deg, #ff007f, #7b68ee);
-            color: white;
-            cursor: pointer;
-        }
+    /* Base navbar link style */
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+  }
 
-        @media (max-width: 768px) {
-            .portfolio-item, .branding-item {
-                width: 45%;
-            }
-        }
-        @media (max-width: 480px) {
-            .portfolio-item, .branding-item {
-                width: 100%;
-            }
-        }
-    </style>
+  /* Neon glow variations per link */
+  nav a:nth-child(1):hover {
+    background: rgba(0, 255, 255, 0.15);
+    box-shadow: 0 0 15px 3px rgba(0, 255, 255, 0.8);
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+  }
+
+  nav a:nth-child(2):hover {
+    background: rgba(255, 0, 127, 0.15);
+    box-shadow: 0 0 15px 3px rgba(255, 0, 127, 0.8);
+    color: #ff007f;
+    text-shadow: 0 0 10px #ff007f;
+  }
+
+  nav a:nth-child(3):hover {
+    background: rgba(255, 255, 0, 0.15);
+    box-shadow: 0 0 15px 3px rgba(255, 255, 0, 0.8);
+    color: #ffff00;
+    text-shadow: 0 0 10px #ffff00;
+  }
+
+  nav a:nth-child(4):hover {
+    background: rgba(128, 0, 255, 0.15);
+    box-shadow: 0 0 15px 3px rgba(128, 0, 255, 0.8);
+    color: #a64dff;
+    text-shadow: 0 0 10px #a64dff;
+  }
+
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 {
+      font-size: 4rem;
+      background: linear-gradient(90deg, #ff007f, #7b68ee);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: 1.5rem;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .highlight-pink {
+    color: #ec4899;
+    font-weight: 600;
+    }
+
+    .highlight-purple {
+      color: #a855f7;
+      font-weight: 600;
+    }
+
+    .hero::after {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 3px; /* line thickness */
+    margin: 100px auto 0; /* space below hero section */
+    background: linear-gradient(90deg, rgba(255,0,127,0.5), rgba(123,104,238,0.5));
+    filter: blur(8px);
+    box-shadow: 0 0 15px rgba(255,0,127,0.3), 0 0 25px rgba(123,104,238,0.3);
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #ff007f, #7b68ee);
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    /* PORTFOLIO SECTION */
+    .portfolio {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    /* .portfolio h1 { */
+      /* font-size: 3rem;
+      background: linear-gradient(90deg, #ff007f, #007bff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      font-weight: lighter;
+      margin-bottom: 60px; */
+    /* } */
+
+    /* h1, h2, .section-title {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    } */
+
+    .portfolio h1, .branding h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ff007f, #00ffff);
+    /* background-size: 200% auto; */
+    background-position: center;
+    display: inline-block; /* ensures gradient width = text width */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    /* text-shadow:
+    0 0 30px #ff00ff,
+    0 0 80px #00ffff; */
+    }
+
+
+    .portfolio-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 70px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .portfolio-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.4s ease;
+      animation: bubbleFloat 6s ease-in-out infinite;
+    }
+
+    .portfolio-item:nth-child(1) { animation-duration: 6s; animation-delay: 0s; }
+    .portfolio-item:nth-child(2) { animation-duration: 7s; animation-delay: -1.5s; }
+    .portfolio-item:nth-child(3) { animation-duration: 5.5s; animation-delay: -0.8s; }
+    .portfolio-item:nth-child(4) { animation-duration: 6.5s; animation-delay: -2s; }
+    .portfolio-item:nth-child(5) { animation-duration: 7.2s; animation-delay: -1.2s; }
+    .portfolio-item:nth-child(6) { animation-duration: 5.8s; animation-delay: -0.6s; }
+
+    /* Bubble design */
+    .bub {
+      width: 220px;
+      height: 220px;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow:
+        inset 5px -5px 10px rgba(255, 255, 255, 0.7),
+        0 0 25px rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(2px) saturate(150%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bub img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 75%;
+      height: 75%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      object-fit: cover;
+      opacity: 0.85;
+      z-index: 1;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .bub::before {
+      position: absolute;
+      content: "";
+      background-color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      top: 30px;
+      right: 35px;
+      box-shadow: 0 0 20px white;
+      opacity: 0.9;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .bub .reflection {
+      position: absolute;
+      bottom: 40px;
+      left: 35px;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.35), rgba(255,255,255,0) 70%);
+      opacity: 0.3;
+      filter: blur(1px);
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .bub::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: conic-gradient(
+        from 0deg,
+        rgba(255, 0, 0, 0.4),
+        rgba(255, 255, 0, 0.4),
+        rgba(0, 255, 255, 0.4),
+        rgba(255, 0, 255, 0.4),
+        rgba(255, 0, 0, 0.4)
+      );
+      mask: radial-gradient(circle, transparent 65%, black 100%);
+      -webkit-mask: radial-gradient(circle, transparent 65%, black 100%);
+      opacity: 0.6;
+      z-index: 0;
+      animation: rotateRim 20s linear infinite;
+    }
+    
+
+    @keyframes rotateRim {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .portfolio-item:hover {
+      transform: scale(1.12);
+    }
+    .portfolio-item:hover img {
+      opacity: 0.7;
+      transform: translate(-50%, -50%) scale(1.05);
+    }
+
+    .portfolio-item p {
+      margin-top: 18px;
+      font-size: 1.1rem;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 6px 15px;
+      border-radius: 15px;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+      opacity: 0;
+    }
+    .portfolio-item:hover p {
+      opacity: 1;
+      transform: translateY(-5px);
+    }
+
+    @keyframes bubbleFloat {
+      0% { transform: translateY(0px) scale(1); }
+      50% { transform: translateY(-15px) scale(1.03); }
+      100% { transform: translateY(0px) scale(1); }
+    }
+
+    /* BRANDING SECTION */
+    .branding {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    /* .branding h1 {
+      font-size: 3rem;
+      background: linear-gradient(90deg, #ff007f, #007bff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: lighter;
+    } */
+
+    /* .branding-grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+    .branding-item {
+      perspective: 1000px;
+      transform-style: preserve-3d;
+      transition: transform 0.6s ease-in-out;
+      cursor: pointer;
+    }
+    .branding-item img {
+      width: 220px;
+      height: 220px;
+      object-fit: contain;
+    }
+    .branding-item.spin {
+      animation: spinCoin 0.6s forwards;
+    }
+    @keyframes spinCoin {
+      0% { transform: rotateY(0deg); }
+      100% { transform: rotateY(360deg); }
+    } */
+
+    .branding-grid {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.branding-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  animation: bubbleFloat 6s ease-in-out infinite;
+  transition: transform 0.4s ease;
+}
+
+/* Smaller bubble version */
+.small-bub {
+  width: 220px;
+  height: 220px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow:
+    inset 5px -5px 10px rgba(255, 255, 255, 0.7),
+    0 0 25px rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(2px) saturate(150%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Branding images inside bubble */
+.small-bub img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75%;
+  height: 75%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  object-fit: contain;
+  opacity: 0.9;
+  z-index: 1;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.branding-item:nth-child(1) .small-bub img,
+.branding-item:nth-child(3) .small-bub img {
+  width: 100%;
+  height: 100%;
+}
+
+.branding-item:hover .small-bub img {
+  opacity: 0.7;
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.branding-item p {
+  margin-top: 12px;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 4px 12px;
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.3s ease;
+}
+
+.branding-item:hover p {
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+/* Out-of-sync float effect for branding bubbles */
+.branding-item:nth-child(1) { animation-duration: 6.5s; animation-delay: 0s; }
+.branding-item:nth-child(2) { animation-duration: 7s; animation-delay: -1.5s; }
+.branding-item:nth-child(3) { animation-duration: 5.8s; animation-delay: -0.8s; }
+
+
+    /* CONTACT */
+    .contact {
+      padding: 50px;
+      text-align: center;
+    }
+    .contact h2 {
+      font-size: 2.5rem;
+      background: linear-gradient(90deg, #ff007f, #7b68ee);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      gap: 15px;
+      margin: 0 auto;
+    }
+    .contact-form input, .contact-form textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background: #1a1a2e;
+      color: white;
+    }
+    .contact-form button {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background: linear-gradient(90deg, #ff007f, #7b68ee);
+      color: white;
+      cursor: pointer;
+    }
+  </style>
 </head>
+
 <body>
-    <header class="header">
-        <div class="logo">John | Web Design Gorey</div>
-        <nav class="nav-links">
-            <a href="#portfolio">Portfolio</a>
-            <a href="#branding">Branding</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+  <header class="header">
+    <div class="logo">Portfolio</div>
+    <nav class="nav-links">
+      <a href="#portfolio">Portfolio</a>
+      <a href="#branding">Branding</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <section class="hero">
-        <h1>Web Designer in Gorey & Wexford</h1>
-        <p>Hi, I'm John – a professional website developer in Gorey, County Wexford.</br>
-            I also create brand designs and logos.</br>
-            Please check out my work.
-            </p>
-        <a href="#portfolio" class="button">View Portfolio</a>
-    </section>
+  <section class="hero">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Hi, My name is John, I am a <span class="highlight-pink">Web Developer</span> and 
+      <span class="highlight-purple">UX Designer</span>.<br>
+    I also create brand designs and logos.<br>
+    Please check out my work.</p>
+    <a href="#portfolio" class="button">View Portfolio</a>
+  </section>
 
-    <section class="portfolio" id="portfolio">
-        <h1>Web Design Portfolio</h1>
-        <div class="portfolio-grid">
-            <a target="_blank" href="https://romantic-wescoff-ecd119.netlify.app/" class="portfolio-item">
-                <img src="images/filmfestival.png" alt="Film Festival Website Gorey">
-                <p>Film Festival</p>
-            </a>
-            <a target="_blank" href="https://theofficeenglish.com/" class="portfolio-item">
-                <img src="images/theoffice.png" alt="The Office English - Web Design Wexford">
-                <p>The Office English</p>
-            </a>
-            <a target="_blank" href="https://github.com/johnroiste/Wordpress/blob/main/Manual.pdf" class="portfolio-item">
-                <img src="images/wordpress.png" alt="Wordpress Site Setup Manual">
-                <p>WordPress Manual</p>
-            </a>
+  <section class="portfolio" id="portfolio">
+    <h1>PORTFOLIO</h1>
+    <div class="portfolio-grid">
+      <a target="_blank" href="https://romantic-wescoff-ecd119.netlify.app/" class="portfolio-item">
+        <div class="bub">
+          <img src="images/filmfestival.png" alt="Film Festival" />
+          <div class="reflection"></div>
         </div>
-        <div class="portfolio-grid">
-            <a target="_blank" href="https://johnroiste.github.io/Restaurant/Restaurant/Restaurant%20review.html" class="portfolio-item">
-                <img src="images/restaurant.png" alt="Restaurant Review Website Gorey">
-                <p>Restaurant Review Website</p>
-            </a>
-            <a target="_blank" href="https://johnroiste.github.io/grid-game/grid-game/" class="portfolio-item">
-                <img src="images/game.png" alt="Grid Game - Web App Gorey">
-                <p>Grid Game</p>
-            </a>
-            <a target="_blank" href="https://tender-bhaskara-b65352.netlify.app/" class="portfolio-item">
-                <img src="images/quoteGenerator.png" alt="Quote Generator - JavaScript Web App Wexford">
-                <p>Quote Generator</p>
-            </a>
-        </div>
-    </section>
+        <p>Film Festival</p>
+      </a>
 
-    <section class="branding" id="branding">
-        <h1>Logo & Branding</h1>
-        <div class="branding-grid">
-            <div onclick="window.open('https://www.instagram.com/irelandpourart', '_blank')" class="branding-item"><img src="images/art.png" alt="Artistic Logo Design Gorey"></div>
-            <div onclick="window.open('https://www.instagram.com/rogan_ireland', '_blank')" class="branding-item"><img src="images/logo.png" alt="Rowear Ireland Logo Design"></div>
-            <div onclick="window.open('https://www.instagram.com/rogan_ireland', '_blank')" class="branding-item"><img src="images/rogan.png" alt="Rogan Logo Gorey"></div>
+      <a target="_blank" href="https://theofficeenglish.com/" class="portfolio-item">
+        <div class="bub">
+          <img src="images/theoffice.png" alt="The Office English" />
+          <div class="reflection"></div>
         </div>
-    </section>
+        <p>The Office English</p>
+      </a>
 
-    <section class="contact" id="contact">
-        <h2>Do You Need a Website?</h2>
-        <form class="contact-form" action="https://formspree.io/f/mwplnrza" method="POST">
-            <input type="text" placeholder="Enter your name" name="name" required>
-            <input type="email" placeholder="Enter your email" name="email" required>
-            <textarea name="message" rows="5" placeholder="Enter your message" required></textarea>
-            <label>
-                <input type="checkbox" required> I agree to the terms and conditions
-            </label>
-            <button type="submit">SEND</button>
-        </form>
-    </section>
+      <a target="_blank" href="https://github.com/johnroiste/Wordpress/blob/main/Manual.pdf" class="portfolio-item">
+        <div class="bub">
+          <img src="images/wordpress.png" alt="Wordpress" />
+          <div class="reflection"></div>
+        </div>
+        <p>Wordpress</p>
+      </a>
+
+      <a target="_blank" href="https://johnroiste.github.io/Restaurant/Restaurant/Restaurant%20review.html" class="portfolio-item">
+        <div class="bub">
+          <img src="images/restaurant.png" alt="Restaurant Review" />
+          <div class="reflection"></div>
+        </div>
+        <p>Restaurant Review Website</p>
+      </a>
+
+      <a target="_blank" href="https://johnroiste.github.io/grid-game/grid-game/" class="portfolio-item">
+        <div class="bub">
+          <img src="images/game.png" alt="Grid Game" />
+          <div class="reflection"></div>
+        </div>
+        <p>Grid Game</p>
+      </a>
+
+      <a target="_blank" href="https://tender-bhaskara-b65352.netlify.app/" class="portfolio-item">
+        <div class="bub">
+          <img src="images/quoteGenerator.png" alt="Quote Generator" />
+          <div class="reflection"></div>
+        </div>
+        <p>Quote Generator</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- <section class="branding" id="branding">
+    <h1>BRANDING</h1>
+    <div class="branding-grid">
+      <div onclick="window.open('https://www.instagram.com/irelandpourart', '_blank')" class="branding-item"><img src="images/art.png" alt="Logo 1"></div>
+      <div onclick="window.open('https://www.instagram.com/rowearireland', '_blank')" class="branding-item"><img src="images/logo.png" alt="Logo 2"></div>
+      <div onclick="window.open('https://www.instagram.com/rowearireland', '_blank')" class="branding-item"><img src="images/rogan.png" alt="Logo 3"></div>
+    </div>
+  </section> -->
+
+  <section class="branding" id="branding">
+  <h1>BRANDING</h1>
+  <div class="branding-grid">
+    <div class="branding-item" onclick="window.open('https://www.instagram.com/irelandpourart', '_blank')">
+      <div class="bub small-bub">
+        <img src="images/art.png" alt="Logo 1" />
+        <div class="reflection"></div>
+      </div>
+      <p>Ireland Pour Art</p>
+    </div>
+
+    <div class="branding-item" onclick="window.open('https://www.instagram.com/rowearireland', '_blank')">
+      <div class="bub small-bub">
+        <img src="images/logo.png" alt="Logo 2" />
+        <div class="reflection"></div>
+      </div>
+      <p>Rowear Ireland</p>
+    </div>
+
+    <div class="branding-item" onclick="window.open('https://www.instagram.com/rowearireland', '_blank')">
+      <div class="bub small-bub">
+        <img src="images/rogan.png" alt="Logo 3" />
+        <div class="reflection"></div>
+      </div>
+      <p>Rogan Design</p>
+    </div>
+  </div>
+</section>
+
+  <section class="contact" id="contact">
+    <h2>Do you need a Website?</h2>
+    <form class="contact-form" action="https://formspree.io/f/mwplnrza" method="POST">
+      <input type="text" placeholder="Enter your name" />
+      <input type="email" placeholder="Enter your email" name="email" />
+      <textarea name="message" rows="5" placeholder="Enter your message"></textarea>
+      <label><input type="checkbox" /> I agree to the terms and conditions</label>
+      <button type="submit">SEND</button>
+    </form>
+  </section>
+
+  <script>
+    document.querySelectorAll('.branding-item').forEach(item => {
+      item.addEventListener('click', function () {
+        if (item.classList.contains('spin')) return;
+        item.classList.add('spin');
+        setTimeout(() => item.classList.remove('spin'), 700);
+      });
+    });
+  </script>
 </body>
 </html>
